@@ -9,5 +9,5 @@ style.use('ggplot')
 df = pd.read_csv('nflx.csv', parse_dates=True, index_col=0) #dataframe
 #print(df.head())
 
-df.plot()
+df['Close'].plot()
 plt.show()
