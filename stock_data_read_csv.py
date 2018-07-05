@@ -17,7 +17,7 @@ df.dropna(inplace=True) #modifies the dataframe in place
 #graph with matplotlib with the values from Pandas
 
 ax1 = plt.subplot2grid((6,1), (0,0), rowspan=5, colspan=1) # 6 rows, 1 column
-ax2 = plt.subplot2grid((6,1), (5,0), rowspan=1, colspan=1)
+ax2 = plt.subplot2grid((6,1), (5,0), rowspan=1, colspan=1, sharex=ax1)
 
 ax1.plot(df.index, df['Close'])
 ax1.plot(df.index, df['21ma'])
